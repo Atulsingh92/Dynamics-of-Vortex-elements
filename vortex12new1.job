@@ -1,0 +1,13 @@
+#!/bin/bash
+#$ -N Vortex_700.cu-cuda
+#$ -m abe
+#$ -o run.log -j y
+#$ -q gpuq
+#$ -l exclusive=false
+#$ -l h_cpu=5:0:0
+#$ -pe openmpi_ib 1
+#$ -cwd
+
+cd $HOME/cuda
+./Vortex_700.out >> vortex_700.txt
+
